@@ -19,4 +19,7 @@
 #undef LOCKING_SUPPORT_ENABLE
 #undef LOCKING_RESYNC_ENABLE
 
+// Double-tap sticky keys to (de)activate them permanently.
+#define ONESHOT_TAP_TOGGLE 2
+
 #endif

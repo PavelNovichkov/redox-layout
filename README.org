@@ -4,7 +4,7 @@
    #+BEGIN_SRC sh
      git clone https://github.com/qmk/qmk_firmware.git
      cd qmk_firmware/keyboards/redox/keymaps
-     git clone https://github.com/envypole/redox-layout envypole
+     git clone https://github.com/extheo/redox-layout extheo
    #+END_SRC
 2. Install the build tools:
    #+BEGIN_SRC sh
@@ -22,10 +22,10 @@
    #+END_SRC
 5. Build the firmware:
    #+BEGIN_SRC sh
-     make redox/rev1:envypole
+     make redox/rev1:extheo
    #+END_SRC
 6. Plug the left (master) side of the keyboard, and flash it:
    #+BEGIN_SRC sh
-     make redox/rev1:envypole:avrdude
+     make redox/rev1:extheo:avrdude
    #+END_SRC
    Push the reset button at the bottom of the keyboard, when avrdude prints the corresponding message.

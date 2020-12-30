@@ -3,8 +3,8 @@
 
 #include "../../config.h"
 
-// LEDs work only with serial communication and left master hand.
-// See https://github.com/mattdibi/redox-keyboard#rgb-underglow for details. 
+// LEDs work only with serial communication and left master hand:
+// https://github.com/mattdibi/redox-keyboard/tree/master/redox#rgb-underglow
 #define USE_SERIAL
 #define MASTER_LEFT
 

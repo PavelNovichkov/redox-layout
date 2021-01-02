@@ -28,4 +28,11 @@
 #define TAPPING_FORCE_HOLD // no auto-repeat on double tap
 #define PERMISSIVE_HOLD
 
+// Mouse keys.
+#define MOUSEKEY_DELAY 0
+#define MOUSEKEY_INTERVAL 16
+#define MOUSEKEY_WHEEL_DELAY 0
+#define MOUSEKEY_MAX_SPEED 6
+#define MOUSEKEY_TIME_TO_MAX 20
+
 #endif

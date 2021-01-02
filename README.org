@@ -1,31 +1,38 @@
+This is my personal layout for the [[https://github.com/mattdibi/redox-keyboard][Redox keyboard]], heavily inspired by the [[https://github.com/manna-harbour/miryoku][Miryoku layout]].
+
 * Build instructions (Arch Linux)
 
 1. Clone the [[https://github.com/qmk/qmk_firmware][QMK firmware]] repository and this repository:
    #+BEGIN_SRC sh
-     git clone https://github.com/qmk/qmk_firmware.git
-     cd qmk_firmware/keyboards/redox/keymaps
-     git clone https://github.com/extheo/redox-layout extheo
+   git clone https://github.com/qmk/qmk_firmware.git
+   cd qmk_firmware/keyboards/redox/keymaps
+   git clone https://github.com/extheo/redox-layout extheo
    #+END_SRC
+
 2. Install the build tools:
    #+BEGIN_SRC sh
-     sudo pacman -S avr-gcc avr-binutils avr-libc avrdude
+   sudo pacman -S avr-gcc avr-binutils avr-libc avrdude
    #+END_SRC
+
 3. Add yourself to the groups necessary to access serial devices:
    #+BEGIN_SRC sh
-     sudo gpasswd -a $USER uucp
-     sudo gpasswd -a $USER lock
+   sudo gpasswd -a $USER uucp
+   sudo gpasswd -a $USER lock
    #+END_SRC
    Log out and log in for this to take effect.
+
 4. Stop ModemManager if it is running, as it grabs serial ports:
    #+BEGIN_SRC sh
-     sudo systemctl stop ModemManager
+   sudo systemctl stop ModemManager
    #+END_SRC
+
 5. Build the firmware:
    #+BEGIN_SRC sh
-     make redox/rev1:extheo
+   make redox/rev1:extheo
    #+END_SRC
+
 6. Plug the left (master) side of the keyboard, and flash it:
    #+BEGIN_SRC sh
-     make redox/rev1:extheo:avrdude
+   make redox/rev1:extheo:avrdude
    #+END_SRC
    Push the reset button at the bottom of the keyboard, when avrdude prints the corresponding message.
